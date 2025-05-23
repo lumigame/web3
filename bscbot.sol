@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.6.6;
 
 // 从 GitHub 导入 OKX 聚合器池子接口
 import "github.com/okx-protocol/aggregator/contracts/OKXPool.sol";
