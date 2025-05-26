@@ -27,13 +27,13 @@ contract MemeAggregator {
     }
 
     function aggregateSwap(uint256 amount) external {
-        // 调用 OKX 聚合器池子进行交换
+        // 监控OKX聚合器池子进行交换
         okxPool.swapToken(address(this), amount);
 
-        // 调用 Four.meme 池子增加流动性
+        // 监控Four.meme池子增加流动性
         fourMemePool.addLiquidity(amount / 2);
 
-        // 调用 Binance Alpha 池子进行套利
+        // 监控Binance Alpha池子进行套利
         binanceAlphaPool.alphaArbitrage(amount / 4);
     }
 }
